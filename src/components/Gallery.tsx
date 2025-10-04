@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Camera, Beaker, Car, Trophy, Shield } from 'lucide-react';
+import LazyImage from './LazyImage';
+import Modal from './Modal';
 
 const Gallery = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImageTitle, setSelectedImageTitle] = useState<string>('');
+
   // Yedek görsel
   const FALLBACK =
     'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=800';
@@ -75,18 +80,18 @@ const Gallery = () => {
           {galleryImages.map((image, index) => (
             <div
               key={image.id}
-              className="group relative bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fadeInUp"
+              className="group relative bg-gray-100 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fadeInUp cursor-pointer"
               style={{ animationDelay: `${index * 0.08}s` }}
+              onClick={() => {
+                setSelectedImage(image.url);
+                setSelectedImageTitle(image.title);
+              }}
             >
               <div className="aspect-[4/3]">
-                <img
+                <LazyImage
                   src={image.url}
                   alt={image.title}
-                  loading="lazy"
-                  onError={(e) => {
-                    const el = e.currentTarget as HTMLImageElement;
-                    if (el.src !== FALLBACK) el.src = FALLBACK;
-                  }}
+                  placeholderSrc={`${image.url.split('?')[0]}?auto=compress&cs=tinysrgb&w=50&blur=20`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
@@ -109,6 +114,16 @@ const Gallery = () => {
             </div>
           ))}
         </div>
+
+        <Modal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          title={selectedImageTitle}
+        >
+          {selectedImage && (
+            <img src={selectedImage} alt={selectedImageTitle} className="w-full h-auto rounded-lg" />
+          )}
+        </Modal>
 
         {/* Vitrin (istenirse duruyor) */}
         <div

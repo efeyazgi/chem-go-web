@@ -19,7 +19,7 @@ const Competition = () => {
       title: 'Önemli Tarihler',
       description:
         '2026 baharında düzenlenecek. Ayrıntılı takvim başvuru esnasında yayınlanır.',
-      features: ['Başvuru: Ocak 2026', 'Ön Eleme: Şubat 2026', 'Yarış Günü: Mart 2026']
+      features: ['Başvuru: Aralık 2025', 'Ön Eleme: Şubat 2026', 'Yarış Günü: Nisan 2026']
     },
     {
       icon: MapPin,
