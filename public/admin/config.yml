@@ -1,0 +1,26 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  # Tek bir JSON dosyası üzerinden "Duyurular"ı yöneteceğiz
+  - name: site
+    label: Site İçeriği
+    files:
+      - name: duyurular
+        label: Duyurular
+        file: "public/content/duyurular.json"   # Panel bu dosyayı düzenler
+        format: json
+        fields:
+          - label: Duyurular
+            name: items
+            widget: list
+            fields:
+              - { label: "Başlık",      name: "title",       widget: "string" }
+              - { label: "Tarih",       name: "date",        widget: "datetime" }
+              - { label: "Açıklama",    name: "description", widget: "text", required: false }
+              - { label: "Link",        name: "href",        widget: "string", required: false }
+              - { label: "Kapak Görseli", name: "image",     widget: "image",  required: false }
