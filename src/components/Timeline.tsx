@@ -30,7 +30,7 @@ const Timeline = () => {
     {
       icon: Trophy,
       title: 'Yarışma Günü',
-      date: 'Mart 2026',
+      date: 'Nisan 2026',
       description: 'Final yarışması ESOGÜ kampüsünde gerçekleştirilecek',
       status: 'upcoming',
       color: 'bg-primary'
@@ -38,7 +38,7 @@ const Timeline = () => {
     {
       icon: Flag,
       title: 'Ödül Töreni',
-      date: 'Mart 2026',
+      date: 'Nisan 2026',
       description: 'Kazanan takımlar final günü ödüllerini alacak',
       status: 'upcoming',
       color: 'bg-purple-500'
@@ -59,7 +59,7 @@ const Timeline = () => {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-primary to-primary-dark h-full rounded-full"></div>
+          <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 w-1 bg-gradient-to-b from-primary to-primary-dark h-full rounded-full"></div>
 
           <div className="space-y-12">
             {timelineEvents.map((event, index) => (
@@ -71,14 +71,14 @@ const Timeline = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 {/* Timeline Node */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                  <div className={`w-16 h-16 ${event.color} rounded-full flex items-center justify-center shadow-lg border-4 border-white`}>
-                    <event.icon className="h-8 w-8 text-white" />
+                <div className="absolute left-4 sm:left-1/2 sm:transform sm:-translate-x-1/2 z-10">
+                  <div className={`w-12 h-12 sm:w-16 sm:h-16 ${event.color} rounded-full flex items-center justify-center shadow-lg border-4 border-white`}>
+                    <event.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                   </div>
                 </div>
 
                 {/* Content Card */}
-                <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                <div className={`w-full sm:w-5/12 ${index % 2 === 0 ? 'sm:pr-8 pl-16 sm:pl-0' : 'sm:pl-8 pl-16 sm:pl-0'}`}>
                   <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
                     <div className="flex items-center justify-between mb-3">
                       <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -118,7 +118,7 @@ const Timeline = () => {
                 const element = document.getElementById('contact');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+              className="bg-white text-primary px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 min-h-[48px] text-base sm:text-lg"
             >
               Hemen Başvur
             </button>

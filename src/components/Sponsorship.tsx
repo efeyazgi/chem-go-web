@@ -115,7 +115,13 @@ const Sponsorship = () => {
                   ))}
                 </ul>
                 
-                <button className={`w-full mt-8 bg-gradient-to-r ${pkg.color} text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105`}>
+                <button 
+                  onClick={() => {
+                    const element = document.getElementById('contact');
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                  className={`w-full mt-8 bg-gradient-to-r ${pkg.color} text-white py-3 sm:py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] text-base sm:text-lg`}
+                >
                   İletişime Geç
                 </button>
               </div>
@@ -150,7 +156,7 @@ const Sponsorship = () => {
               const element = document.getElementById('contact');
               if (element) element.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-200"
+            className="bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors duration-200 min-h-[48px]"
           >
             Özel Teklif İsteyin
           </button>

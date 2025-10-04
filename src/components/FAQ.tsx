@@ -31,7 +31,7 @@ const FAQ = () => {
     },
     {
       question: 'Yarışma kuralları nelerdir?',
-      answer: 'Arabalar tamamen kimyasal reaksiyonlarla çalışmalıdır. Elektrikli motor, pil veya harici güç kaynağı kullanılamaz. Güvenlik standartlarına uyum zorunludur.'
+      answer: 'Araçlarda hareketi sağlamak için motor kullanılabilir; ancak motorun çalışması için gerekli enerji yalnızca kimyasal reaksiyonlardan elde edilmelidir. Harici pil, elektrik kaynağı veya önceden depolanmış enerji kullanımı yasaktır.'
     },
     {
       question: 'Konaklama desteği var mı?',
@@ -105,7 +105,7 @@ const FAQ = () => {
               const element = document.getElementById('contact');
               if (element) element.scrollIntoView({ behavior: 'smooth' });
             }}
-            className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+            className="bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-colors duration-200 min-h-[48px] text-base sm:text-lg"
           >
             İletişime Geç
           </button>

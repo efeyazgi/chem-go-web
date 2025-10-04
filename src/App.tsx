@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white font-poppins">
+    <div className="min-h-screen bg-white font-poppins touch-manipulation">
       <Header />
       <main>
         <Hero />

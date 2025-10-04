@@ -22,10 +22,10 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-white space-y-8 animate-slideInLeft">
-            <h1 className="text-5xl lg:text-7xl font-black font-poppins leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black font-poppins leading-tight">
               <span className="text-primary">Chem</span> GO!
             </h1>
-            <p className="text-xl lg:text-2xl font-light leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed">
               Türkiye'nin <span className="text-primary font-semibold">ilk kimyasal enerjiyle hareket eden araba yarışması!</span> 
               <br />Eskişehir Osmangazi Üniversitesi'nde kimya mühendisliği öğrencileri tarafından düzenleniyor.
             </p>
@@ -53,14 +53,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl"
+                className="bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-xl min-h-[48px]"
               >
                 Hemen Başvur
-                <ArrowRight className="h-5 w-5" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" />
               </button>
               <button
                 onClick={() => scrollToSection('sponsorship')}
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 min-h-[48px]"
               >
                 Sponsor Ol
               </button>

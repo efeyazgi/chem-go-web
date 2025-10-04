@@ -149,7 +149,7 @@ const Contact = () => {
                   name="type"
                   value={formData.type}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 min-h-[48px] text-base"
                 >
                   <option value="participant">Yarışmacı Başvurusu</option>
                   <option value="sponsor">Sponsor Olmak İstiyorum</option>
@@ -157,7 +157,7 @@ const Contact = () => {
                 </select>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-secondary mb-2">
                     Ad Soyad *
@@ -169,7 +169,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 min-h-[48px] text-base"
                     placeholder="Adınız ve soyadınız"
                   />
                 </div>
@@ -185,7 +185,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 min-h-[48px] text-base"
                     placeholder="ornek@email.com"
                   />
                 </div>
@@ -202,7 +202,7 @@ const Contact = () => {
                     value={formData.university}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 min-h-[48px] text-base"
                   >
                     <option value="" disabled>Üniversite seçin...</option>
                     {sortedUniversities.map((uni, index) => (
@@ -216,7 +216,7 @@ const Contact = () => {
                     name="university"
                     value={formData.university}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 min-h-[48px] text-base"
                     placeholder="Üniversiteniz veya kurumunuz"
                   />
                 )}
@@ -233,7 +233,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors duration-200 resize-none text-base"
                   placeholder="Mesajınızı buraya yazın..."
                 />
               </div>
@@ -241,7 +241,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitted}
-                className={`w-full px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 ${
+                className={`w-full px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 min-h-[48px] ${
                   isSubmitted
                     ? 'bg-green-500 text-white'
                     : 'bg-primary hover:bg-primary-dark text-white'

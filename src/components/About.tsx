@@ -61,19 +61,19 @@ const About = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-20 bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+        <div className="mt-20 bg-white rounded-3xl p-6 sm:p-8 lg:p-12 shadow-xl">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
             <div className="animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
-              <div className="text-4xl lg:text-5xl font-black text-primary mb-2">20+</div>
-              <div className="text-secondary font-semibold">Beklenen Katılımcı</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary mb-2">20+</div>
+              <div className="text-secondary font-semibold text-sm sm:text-base">Beklenen Katılımcı</div>
             </div>
             <div className="animate-fadeInUp" style={{ animationDelay: '1s' }}>
-              <div className="text-4xl lg:text-5xl font-black text-primary mb-2">5+</div>
-              <div className="text-secondary font-semibold">Üniversite</div>
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-primary mb-2">5+</div>
+              <div className="text-secondary font-semibold text-sm sm:text-base">Üniversite</div>
             </div>
             <div className="animate-fadeInUp" style={{ animationDelay: '1.2s' }}>
-              <div className="text-4xl lg:text-5xl font-black text-primary mb-2">Para ödülleri ve daha fazlası</div>
-              <div className="text-secondary font-semibold"></div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-primary mb-2">Para ödülleri</div>
+              <div className="text-secondary font-semibold text-sm sm:text-base">ve daha fazlası</div>
             </div>
           </div>
         </div>

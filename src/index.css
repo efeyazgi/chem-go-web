@@ -1,3 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Mobil optimizasyonları */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+  
+  /* Dokunma hedefleri için minimum boyut */
+  button, 
+  input[type="button"], 
+  input[type="submit"], 
+  input[type="reset"],
+  select,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* iOS Safari için input zoom'u engelle */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  textarea,
+  select {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 640px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"],
+    textarea,
+    select {
+      font-size: 16px !important;
+    }
+  }
+}
+
+/* Smooth scrolling */
+@layer utilities {
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  /* Mobil için daha iyi dokunma deneyimi */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}
